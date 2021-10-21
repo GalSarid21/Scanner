@@ -9,6 +9,6 @@ def create_new_scan(request):
         serializer = ScanSerializer(data = request.data)
         serializer.is_valid()
         serializer.save()
-        return Response()
+        return Response(f"New scan created successfully")
     except Exception as ex:
         return Response(f"Creation of new scan failed with exception: {ex}")
