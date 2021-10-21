@@ -7,7 +7,7 @@ from ingest.serializers import ScanSerializer
 
 
 @api_view()
-def get_scan_by_id(request, id):
+def get_scan_by_id(id):
     try:
         scan = get_object_or_404(Scan, pk = id)
         print(scan)
